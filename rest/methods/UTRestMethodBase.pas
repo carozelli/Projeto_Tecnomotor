@@ -116,7 +116,7 @@ end;
 
 procedure TIdHttp.Delete(AURL: String);
 begin
-  DoRequest(hmDelete, AURL,nil, nil, []);
+  DoRequest('DELETE', AURL,nil, nil, []);
 end;
 
 procedure TRestMethodBase.CreateHttpConnection;
