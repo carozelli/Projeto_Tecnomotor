@@ -1,9 +1,9 @@
 object frmPrincipal: TfrmPrincipal
   Left = 517
   Top = 214
-  Width = 1040
-  Height = 705
   Caption = 'Tabela de aplica'#231#227'o Rasther'
+  ClientHeight = 646
+  ClientWidth = 1024
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,10 +11,8 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   Menu = mmPrincipal
-  OldCreateOrder = False
   Position = poScreenCenter
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object statusPrincipal: TStatusBar
     Left = 0
@@ -22,6 +20,8 @@ object frmPrincipal: TfrmPrincipal
     Width = 1024
     Height = 19
     Panels = <>
+    ExplicitTop = 626
+    ExplicitWidth = 1020
   end
   object pnlData: TPanel
     Left = 0
@@ -30,7 +30,11 @@ object frmPrincipal: TfrmPrincipal
     Height = 627
     Align = alClient
     BevelOuter = bvNone
+    Color = clMenu
+    ParentBackground = False
     TabOrder = 1
+    ExplicitWidth = 1020
+    ExplicitHeight = 626
   end
   object mmPrincipal: TMainMenu
     Left = 16

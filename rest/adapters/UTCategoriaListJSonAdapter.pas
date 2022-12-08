@@ -3,23 +3,24 @@ unit UTCategoriaListJSonAdapter;
 interface
 
 uses
-  uLkJSON, Classes, SysUtils, UTBaseJSonAdapter, UICategoria;
+  uLkJSON, Classes, SysUtils, UTBaseJSonAdapter, UICategoria, UTFrmPrincipal;
 
 type
   TCategoriaListJSonAdapter = class(TBaseJSonListAdapter, ICategoriaList)
     function GetItem(Index: Integer):String;
   end;
+          [LEVES,PESADOS,AGRICOLAS,MOTOS]
 
 implementation
 
-{*------------------------------------------------------------------------------
-  ["LEVES","PESADOS","AGRICOLAS","MOTOS"]
--------------------------------------------------------------------------------}
+
+
+
 
 { TCategoriaListJSonAdapter }
 
-function TCategoriaListJSonAdapter.GetItem(
-  Index: Integer): String;
+function TCategoriaListJSonAdapter.GetItem(Index: Integer): String;
+
 begin
   Result := inherited GetItem(index).Value;
 end;

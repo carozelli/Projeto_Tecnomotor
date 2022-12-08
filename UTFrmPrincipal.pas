@@ -1,11 +1,8 @@
 unit UTFrmPrincipal;
-
 interface
-
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ComCtrls, Menus, ExtCtrls, StdCtrls, UTTreeView, UIDados;
-
 type
   TfrmPrincipal = class(TForm)
     mmPrincipal: TMainMenu;
@@ -27,19 +24,16 @@ type
     procedure CreateTreeView(nameTreeview: string; values: IDadosList; click: TTreeViewClick);
     procedure CarregarMontadoras();
     procedure ClickMontadora(value: IDados);
+
   public
     { Public declarations }
   end;
-
 var
   frmPrincipal: TfrmPrincipal;
-
 implementation
-
 uses
   UTMontadoraJSonController;
-
-{$R *.dfm}
+  {$R *.dfm}
 
 procedure TfrmPrincipal.CarregarMontadoras();
 var
@@ -51,6 +45,7 @@ end;
 
 procedure TfrmPrincipal.ClickMontadora(value: IDados);
 begin
+  //ClickMontadora := value;
 end;
 
 procedure TfrmPrincipal.LimparEscolha();
@@ -58,30 +53,25 @@ begin
   while Self.pnlData.ControlCount > 0 do
     Self.pnlData.Controls[Self.pnlData.ControlCount-1].Free;
 end;
-
 procedure TfrmPrincipal.mArquivoNovaEscolhaClick(Sender: TObject);
 begin
   NovaEscolha;
 end;
-
 procedure TfrmPrincipal.NovaEscolha;
 begin
   LimparEscolha;
   CarregarMontadoras();
 end;
-
 procedure TfrmPrincipal.tmrInicializacaoTimer(Sender: TObject);
 begin
   tmrInicializacao.Enabled := False;
   NovaEscolha;
 end;
-
 procedure TfrmPrincipal.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   LimparEscolha;
 end;
-
 procedure TfrmPrincipal.CreateTreeView(nameTreeview: string; values: IDadosList;
   click: TTreeViewClick);
 var
@@ -106,6 +96,4 @@ begin
   end;
 end;
 
-
 end.
-

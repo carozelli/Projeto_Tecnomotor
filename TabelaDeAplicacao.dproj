@@ -61,7 +61,7 @@
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
@@ -120,7 +120,9 @@
         <DCCReference Include="rest\adapters\UIDados.pas"/>
         <DCCReference Include="rest\controllers\UTCategoriaJSonController.pas"/>
         <DCCReference Include="rest\adapters\UTCategoriaListJSonAdapter.pas"/>
-        <DCCReference Include="rest\adapters\UICategoria.pas"/>
+        <DCCReference Include="rest\adapters\UICategoria.pas">
+            <Form>Categoria</Form>
+        </DCCReference>
         <DCCReference Include="UTTreeView.pas"/>
         <DCCReference Include="util\UTMapList.pas"/>
         <DCCReference Include="rest\controllers\UTDefaultJSonController.pas"/>
@@ -144,9 +146,6 @@
                 <Source>
                     <Source Name="MainSource">TabelaDeAplicacao.dpr</Source>
                 </Source>
-                <Language>
-                    <Language Name="RootDir">..\..\..\..\Users\Gabriel\Desktop\Estudos\Prova tecnomotor\tabela_aplicacao_rasther-main\</Language>
-                </Language>
             </Delphi.Personality>
             <Platforms>
                 <Platform value="Win32">True</Platform>

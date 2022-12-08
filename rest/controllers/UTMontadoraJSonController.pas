@@ -20,7 +20,7 @@ uses
   UTResource, UTResponseJSonAdapter;
 
 const
-  RES_MONTADORA = '/montadora?pm.platform=1&pm.version=23';
+  RES_MONTADORA = '/montadora?pm.platform=1&pm.version=23&pm.type=LEVES';
 
 { TMontadoraJSonController }
 

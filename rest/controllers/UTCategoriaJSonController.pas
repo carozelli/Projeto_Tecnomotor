@@ -10,7 +10,8 @@ type
   TCategoriaJSonController = class(TObjectPersistent)
     private
     public
-      function Get(): ICategoriaList;
+      function Get(): ICategoriaList;overload;
+
   end;
 
 implementation
@@ -19,7 +20,7 @@ uses
   UTResource, UTResponseJSonAdapter;
 
 const
-  RES_CATEGORIA = '/tipo';
+  RES_CATEGORIA = '/tipo?pm.platform=1&pm.version=23';
 
 { TCategoriaJSonController }
 

@@ -21,7 +21,7 @@ uses
   UIDados in 'rest\adapters\UIDados.pas',
   UTCategoriaJSonController in 'rest\controllers\UTCategoriaJSonController.pas',
   UTCategoriaListJSonAdapter in 'rest\adapters\UTCategoriaListJSonAdapter.pas',
-  UICategoria in 'rest\adapters\UICategoria.pas',
+  UICategoria in 'rest\adapters\UICategoria.pas'{Categoria},
   UTTreeView in 'UTTreeView.pas',
   UTMapList in 'util\UTMapList.pas',
   UTDefaultJSonController in 'rest\controllers\UTDefaultJSonController.pas';
